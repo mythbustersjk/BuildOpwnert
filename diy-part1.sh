@@ -18,8 +18,8 @@
 sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #添加软件依赖
 #添加lua-maxminddb 依赖
-git clone https://github.com/jerrykuku/lua-maxminddb.git
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
 #添加luci-app
-git clone https://github.com/jerrykuku/luci-app-vssr.git
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
 #添加Adguardhome
-git clone https://github.com/rufengsuixing/luci-app-adguardhome
+git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
