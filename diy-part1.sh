@@ -16,7 +16,10 @@
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
-sed -i '$a src-git weifuture https://github.com/hongweifuture/openwrt-packages' .feeds.conf.default
-sed -i '$a src-git pwdep https://github.com/hongweifuture/pwdep.git' .feeds.conf.default
 #添加软件依赖
-#git clone https://github.com/P3TERX/xxx package/xxx
+#添加lua-maxminddb 依赖
+git clone https://github.com/jerrykuku/lua-maxminddb.git
+#添加luci-app
+git clone https://github.com/jerrykuku/luci-app-vssr.git
+#添加Adguardhome
+git clone https://github.com/rufengsuixing/luci-app-adguardhome
