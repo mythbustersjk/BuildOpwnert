@@ -30,7 +30,7 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: true
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:
@@ -188,16 +188,4 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Create Release
-      id: create_release
-      uses: ncipollo/release-action@v1.7.3
-      with:
-        name: FriendlyWrt_NanoPi-R2S 
-        allowUpdates: true
-        tag: ${{ env.NOW }}
-      env:
-        NOW: $(date +'%Y-%m-%dT%H:%M:%S')
-        commit: main
-        replacesArtifacts: true
-        token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: ./artifact/*.zip,./artifact/*.config
+
