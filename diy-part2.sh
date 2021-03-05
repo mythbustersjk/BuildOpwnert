@@ -16,7 +16,7 @@ sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_genera
 # Add netdata
 pushd feeds/packages/admin
 rm -rf netdata
-svn co https://github.com/immortalwrt/packages/trunk/admin/netdata
+svn co https://github.com/immortalwrt/packages/tree/master/admin/netdata
 popd
 
 # 修复核心及添加温度显示
